@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <header>
+    <h1>Task<span>Board</span></h1>
+    <span id="task-counter">0 tareas</span>
+  </header>
+
+  <div class="form-wrapper">
+    <input type="text" id="task-input" placeholder="Añadir nueva tarea..." maxlength="120" />
+    <button id="add-btn" onclick="addTask()">+ Añadir</button>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" onclick="setFilter('all', this)">Todas</button>
+    <button class="filter-btn" onclick="setFilter('pending', this)">Pendientes</button>
+    <button class="filter-btn" onclick="setFilter('done', this)">Completadas</button>
+  </div>
+
+  <ul id="task-list"></ul>
+  <div id="empty-state"><span>📋</span>No hay tareas aquí.</div>
+  <div id="toast"></div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
